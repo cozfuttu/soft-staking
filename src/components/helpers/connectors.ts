@@ -2,10 +2,13 @@ import { InjectedConnector } from "@web3-react/injected-connector";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { WalletLinkConnector } from "@web3-react/walletlink-connector";
 import { NetworkConnector } from "@web3-react/network-connector";
+import { CHAIN_ID } from "config";
 
 export const RPC_URLS = {
-  137: "https://polygon-rpc.com/",
-  80001: "https://rpc-mumbai.matic.today",
+  1: "https://eth-mainnet.public.blastapi.io", // ETH Mainnet
+  5: "https://eth-goerli.public.blastapi.io", // Görli Testnet (ETH)
+  137: "https://polygon-rpc.com/", // Polygon Mainnet
+  80001: "https://rpc-mumbai.matic.today", // Polygon Testnet (Polygon)
 };
 
 // metamask
@@ -32,5 +35,5 @@ export const walletlink = new WalletLinkConnector({
 // network
 export const network = new NetworkConnector({
   urls: RPC_URLS,
-  defaultChainId: 80001,
+  defaultChainId: CHAIN_ID,
 });
