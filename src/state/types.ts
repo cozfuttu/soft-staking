@@ -1,8 +1,8 @@
 export interface Nft {
   name: string;
   image: string;
-  typeId: number;
-  tokenId: number;
+  typeId: string;
+  tokenId: string;
 }
 
 export interface UserNftState {

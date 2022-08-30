@@ -9,6 +9,8 @@ export interface GlobalColors {
 export interface Gradients {
   primaryGradient: string;
   primaryGradientHorizontal: string;
+  primaryGradientTransparent: string;
+  primaryGradientHorizontalTransparent: string;
 }
 
 export interface ThemedColors extends GlobalColors {

@@ -13,12 +13,14 @@ export const RPC_URLS = {
 
 // metamask
 export const injected = new InjectedConnector({
-  supportedChainIds: [137, 80001],
+  supportedChainIds: [1, 5, 137, 80001],
 });
 
 // walletconnect
 export const walletconnect = new WalletConnectConnector({
   rpc: {
+    1: RPC_URLS[1],
+    5: RPC_URLS[5],
     137: RPC_URLS[137],
     80001: RPC_URLS[80001],
   },
@@ -29,7 +31,7 @@ export const walletconnect = new WalletConnectConnector({
 export const walletlink = new WalletLinkConnector({
   url: RPC_URLS[137],
   appName: "Battlemancers-Soft-Staking",
-  supportedChainIds: [137, 80001],
+  supportedChainIds: [1, 5, 137, 80001],
 });
 
 // network

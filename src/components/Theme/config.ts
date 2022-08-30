@@ -37,6 +37,8 @@ export const globalColors: GlobalColors = {
 export const gradients: Gradients = {
   primaryGradient: `linear-gradient(180deg, ${globalColors.primary} 0%, ${globalColors.secondary} 100%)`,
   primaryGradientHorizontal: `linear-gradient(90deg, ${globalColors.primary} 0%, ${globalColors.secondary} 100%)`,
+  primaryGradientTransparent: `linear-gradient(180deg, ${globalColors.primary}66 0%, ${globalColors.secondary}66 100%)`,
+  primaryGradientHorizontalTransparent: `linear-gradient(90deg, ${globalColors.primary}66 0%, ${globalColors.secondary}66 100%)`,
 };
 
 const globalTheme = {

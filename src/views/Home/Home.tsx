@@ -1,15 +1,25 @@
 import React from 'react'
-import { Layout } from 'components'
+import { Flex, Layout, Text } from 'components'
 import { useUserNfts } from 'state/hooks'
+import NFTCard from './components/NFTCard'
 
 const Home = () => {
-  const nfts = useUserNfts()
+  const userData = useUserNfts()
 
-  console.log('nfts: ', nfts)
+  const cards = userData?.nfts.map((nft) => <NFTCard key={nft.tokenId} nft={nft} />)
+
+  console.log(userData)
 
   return (
     <Layout>
-      a
+      <Text fontSize='l'>MY NFTs</Text>
+      <Flex flexWrap="wrap" gap={6}>
+        {cards}
+      </Flex>
+      <Text fontSize='l'>STAKED NFTs</Text>
+      <Flex flexWrap="wrap" gap={6}>
+        {cards}
+      </Flex>
     </Layout>
   )
 }
